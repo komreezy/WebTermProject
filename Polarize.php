@@ -13,7 +13,7 @@ $url = "https://api.twitter.com/1.1/statuses/user_timeline.json";
  
 $requestMethod = "GET";
  
-$getfield = '?screen_name=kanyewest&count=20';
+$getfield = '?screen_name=' + $POST["search"] + '&count=20';
 $twitter = new TwitterAPIExchange($settings);
 $string = json_decode($twitter->setGetfield($getfield)
 ->buildOauth($url, $requestMethod)

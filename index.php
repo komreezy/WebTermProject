@@ -24,8 +24,8 @@
 		<?php include 'Polarize.php'; ?> 
 		
 	</div>
-	<form id="searchbox" action="">
-	    <input id="search" type="text" placeholder="Search Topics">
+	<form id="searchbox" action="Polarize.php" method="post">
+	    <input id="search" name="search" type="text" placeholder="Search Topics">
 	    <input id="submit" type="submit" value="Search">
 	</form>
 	
