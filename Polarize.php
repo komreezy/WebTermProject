@@ -1,5 +1,5 @@
-<?php
-			require_once('TwitterAPIExchange.php');
+<!-- <?php
+require_once('TwitterAPIExchange.php');
  
 			/** Set access tokens here - see: https://dev.twitter.com/apps/ **/
 $settings = array(
@@ -9,17 +9,37 @@ $settings = array(
     'consumer_secret' => "xOk1d9wqPpzTIK68gACMG5lrv2M587ItlHNe3e2j0auVFQ9VBx"
 );
  
-$url = "https://api.twitter.com/1.1/statuses/user_timeline.json";
+// $url = "https://api.twitter.com/1.1/statuses/user_timeline.json";
  
-$requestMethod = "GET";
+// $requestMethod = "GET";
  
-$getfield = '?screen_name=kanyewest&count=20';
+// $getfield = '?screen_name=kanyewest';
+// $twitter = new TwitterAPIExchange($settings);
+// $string = json_decode($twitter->setGetfield($getfield)
+// ->buildOauth($url, $requestMethod)
+// ->performRequest(),$assoc = TRUE);
+
+// if($string["errors"][0]["message"] != "") {echo "<h3>Sorry, there was a problem.</h3><p>Twitter returned the following error message:</p><p><em>".$string[errors][0]["message"]."</em></p>";exit();}
+
+$url = 'https://api.twitter.com/1.1/search/tweets.json';
+
+$requestMethod = 'GET';
+
+$getfield = '?q=love+OR+hate&result_type=recent&count=3';
 $twitter = new TwitterAPIExchange($settings);
-$string = json_decode($twitter->setGetfield($getfield)
-->buildOauth($url, $requestMethod)
-->performRequest(),$assoc = TRUE);
-//if($string["errors"][0]["message"] != "") {echo "<h3>Sorry, there was a problem.</h3><p>Twitter returned the following error message:</p><p><em>".$string[errors][0]["message"]."</em></p>";exit();}
-foreach($string as $items)
+$string = $twitter->setGetfield($getfield)
+    ->buildOauth($url, $requestMethod)
+    ->performRequest();
+ 
+$result = json_decode($string, true);
+
+// foreach ($result['statuses'] as $items) {
+// 	echo "Tweet: " . $items['text'] . "<br />";
+// 	echo "Result Type: " . $items['result_type'] . "<br />";
+// 	echo "<br />";
+// }
+ 
+foreach($result['statuses'] as $items)
 {
 	echo "<div id='match'>";
 	echo "Time and Date of Tweet: ".$items['created_at']."<br />";
@@ -31,6 +51,5 @@ foreach($string as $items)
 	echo "Listed: ". $items['user']['listed_count']."<br /><hr />";
 	echo "</div>";
 	
-
 }
-?>
+?> -->
