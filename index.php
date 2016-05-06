@@ -19,7 +19,7 @@
 
 		$url = 'https://api.twitter.com/1.1/search/tweets.json';
 		$requestMethod = 'GET';
-		$count = "5"; //The amount of tweets to show
+		$count = "50"; //The amount of tweets to show
   ?>
 </head>
 <body>
