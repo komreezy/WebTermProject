@@ -84,10 +84,16 @@
 			}
 
 		 ?> 
-		
+	
 	</div>
 	<form id="searchbox" action="index.php" method="post" enctype="multipart/form-data">
 	    <input id="search" name="search_result" type="text" placeholder="Search Topics">
+	    <input id="submit" type="submit" value="Search">
+	</form>
+	
+	<form id="trender" action="trendtest.php" method="post" enctype="multipart/form-data">
+		<input id="latitude" name="latitude" type="hidden">
+	    <input id="longitude" name="longitude" type="hidden">
 	    <input id="submit" type="submit" value="Search">
 	</form>
 	
