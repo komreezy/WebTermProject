@@ -16,6 +16,7 @@ body{
 
 p { 
 	padding: 10px; 
+	clear: left;
 }
 
 form {

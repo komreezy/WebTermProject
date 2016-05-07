@@ -35,7 +35,7 @@
 			->performRequest();
 		//echo $lat;
 		//echo $lon;
-		//echo $string;
+		echo "<p>At location:</p></br>";
 		$result = json_decode($string, true); 
 		foreach($result as $items)
 		{
@@ -55,11 +55,10 @@
 		$newString = $twitter->setGetfield($getfield)
 			->buildOauth($newUrl, $requestMethod)
 			->performRequest();
-		echo $newString;
+		echo "<p>Current trends:</p></br>";
 		$newResult = json_decode($newString, true); 
 		foreach($newResult as $array){
-			foreach($array as $date){
-				foreach($date as $trend)
+			foreach($array['trends'] as $items){
 				{
 					echo "<div id='match'>";
 					echo "tweet volume: ".$items['tweet_volume']."<br />";
