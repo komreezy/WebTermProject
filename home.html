@@ -1,0 +1,70 @@
+<html>
+	<head>
+	<title>Polar Statistics</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <script src = "http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/bootstrap.min.js"></script>
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  
+  
+ 
+  
+  
+  <?php
+  		require_once('TwitterAPIExchange.php');
+ 
+			/** Set access tokens here - see: https://dev.twitter.com/apps/ **/
+		$settings = array(
+		    'oauth_access_token' => "3344215463-XNj7sDb8WaCvjEbErOHTqaCv9HdlHeZcU7The5X",
+		    'oauth_access_token_secret' => "4uPiJrFsL0SuWIefaT3RMnPmR684ce29LrWnY35pI1Lkw",
+		    'consumer_key' => "60EwKn8kG8sDW45ZcuFJByOmd",
+		    'consumer_secret' => "xOk1d9wqPpzTIK68gACMG5lrv2M587ItlHNe3e2j0auVFQ9VBx"
+		);
+
+		$url = 'https://api.twitter.com/1.1/search/tweets.json';
+		$requestMethod = 'GET';
+		$count = "50"; //The amount of tweets to show
+  ?>
+</head>
+
+
+	<nav class="navbar navbar-inverse">
+		<div class ="container-fluid">
+			<!-- Logo -->
+			<div class = "navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavBar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href ="#" class="navbar-brand"> Twitter Stuff</a>
+			</div>
+			
+			<!-- Menu Items -->
+			<div class="collapse navbar-collapse" id="mainNavBar">
+				<ul class="nav navbar-nav">
+					<li class="active"> <a href="home.html">Home</a></li>
+					<li> <a href="index.php">About</a>
+					<li> <a href="index.php">Polarize</a>
+				
+					
+				</ul>
+				
+				
+				
+				<ul class="nav navbar-nav navbar-right"> 
+					<li> <a href="#"> SignUp/SignIn </a> </li>
+				</ul>
+			</div>
+			
+			</div>
+	</nav>
+
+	<p>HOME</p>
+	
+</html>

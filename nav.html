@@ -1,0 +1,66 @@
+<nav class="navbar navbar-inverse">
+		<div class ="container-fluid">
+			<!-- Logo -->
+			<div class = "navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavBar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href ="home.php" class="navbar-brand"> Twitter Polarity</a>
+			</div>
+			
+			<!-- Menu Items -->
+			<div class="collapse navbar-collapse" id="mainNavBar">
+				<ul class="nav navbar-nav">
+					<li class="active"> <a href="home.php">Home</a></li>
+					<li> <a href="index.php">Statistics</a> </li>
+					<li> <a href="index.php">Polarize</a> </li>
+				</ul>
+				
+				<ul class="nav navbar-nav navbar-right"> 
+					<li> <button type="button" class="btn btn-success" data-toggle="modal" data-target="#popUpWindow"> SignIn/SignOut </button> </li>
+				</ul>
+			
+			</div>
+		</div>
+			
+	</nav>
+	
+	<div>
+		
+	
+		<div class="modal fade" id="popUpWindow"> 
+			<div class="modal-dialog">
+				<div class="modal-content">
+					
+					<!-- header -->
+					<div class="modal-header"> 
+						<button type="button" class="close" data-dismiss="modal"> &times; </button>
+						<h3 class="modal-title"> Sign In</h3>
+					</div>
+					
+					<!-- Body -->
+					
+					<div class="modal-body"> 
+						<form role="form">
+							<div class="form-group">
+								<input type="email" class="form-control" placeholder="Email">
+							</div>
+							
+							<div class="form-group">
+								<input type="password" class="form-control" placeholder="Password">
+							</div>
+						</form>
+					</div>
+					
+					<!-- Button -->
+					<div class="modal-footer">
+						<button class="btn btn-primary btn-block"> Log In </button>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	
+	</div>

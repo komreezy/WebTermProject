@@ -64,6 +64,10 @@ form {
 	background-color: #3498db;
 }
 
+a {
+	cursor: pointer;
+}
+
 #left h1 {
 	font-family: "Myriad Pro";
 	text-align: center;
@@ -78,7 +82,7 @@ form {
 	color: white;
 }
 
-#match {
+.match {
 	float: left;
 	width: 80%;
 	margin-left: 10%;
