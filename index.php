@@ -149,7 +149,7 @@
 				$result = json_decode($string, true); 
 				foreach($result['statuses'] as $items)
 				{
-					echo "<div id='match'>";
+					echo "<div class='match'>";
 					echo "Tweet: ". $items['text']."<br />";
 					echo "Time and Date of Tweet: ".$items['created_at']."<br />";
 					echo "Tweeted by: ". $items['user']['name']."<br />";
