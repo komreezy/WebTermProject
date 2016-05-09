@@ -10,6 +10,10 @@ body{
 	overflow-y: scroll;
 }
 
+nav{
+	position: fixed;
+}
+
 * { 
 	margin: 0; padding: 0; 
 }
@@ -17,13 +21,14 @@ body{
 p { 
 	padding: 10px; 
 	clear: left;
+	color: white;
 }
 
 form {
     position:fixed;
-	top:7%;
+	top:9%;
 	left:40%;
-	width:500px;
+	width:40%;
     z-index: 1;
 }
 
@@ -32,6 +37,10 @@ form {
 	background:rgba(50, 50, 50, 0.2);
 	border:0px solid #dbdbdb;
 	position:relative;
+}
+
+#clickable {
+	cursor: pointer;
 }
 
 #submit {
@@ -49,19 +58,25 @@ form {
 }
 
 #left { 
+	position: absolute;
+	top: 0px;
+	left: 0px;
 	width: 50%;
 	min-height: 100%;
-	float: left;
 	overflow-y: scroll;
 	background-color: #c0392b;
+	z-index: -1;
 }
 
 #right { 
+	position: absolute;
+	top: 0px;
+	right: 0px;
 	width: 50%;
 	min-height: 100%;
-	float: right;
 	overflow-y: scroll;
 	background-color: #3498db;
+	z-index: -1;
 }
 
 a {
@@ -87,8 +102,10 @@ a {
 	width: 80%;
 	margin-left: 10%;
 	margin-top: 10px;
+	padding: 5px;
 	background-color: white;
-	border-style: dashed;
-	border-color: black;
-	border-width: 2px;
+	border-radius: 10px;
+	opacity: 0.8;
+	z-index: 4;
+	
 }

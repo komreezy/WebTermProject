@@ -32,14 +32,14 @@ function setLongitude(position) {
 	counter--;
 }
 
-document.getElementById("trends").onclick = function(){formSubmit()};
+document.getElementById("trends").onclick = function(){trendSubmit()};
 	
-function formSubmit(){
+function trendSubmit(){
 	console.log("clicked");
 	if (counter <= 0){
 		document.getElementById('trender').submit();
 	} else {
-        setTimeout( formSubmit, 500 );
+        setTimeout( trendSubmit, 500 );
     }
 }
 
