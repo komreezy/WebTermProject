@@ -29,7 +29,7 @@
 						echo "Tweet: ". $items['text']."<br />";
 						//to see scores uncomment
 						//echo "Dominant:". $class.", scores: ";
-						print_r($scores);
+						//print_r($scores);
 						echo "Time and Date of Tweet: ".$items['created_at']."<br />";
 						echo "Tweeted by: ". $items['user']['name']."<br />";
 						echo "Screen name: ". $items['user']['screen_name']."<br />";
@@ -38,7 +38,7 @@
 						echo "Listed: ". $items['user']['listed_count']."<br>";
 						echo "Positivity Score: ". $scores['pos'] ."<br>";
 						echo "Negativity Score: ". $scores['neg'] ."<br>";
-						//echo "Neutrality Score: ". $scores['neu'] ."<br>";
+						echo "Neutrality Score: ". $scores['neu'] ."<br>";
 						echo "</div>";
 					}
 				}
@@ -79,6 +79,9 @@
 						echo "Followers: ". $items['user']['followers_count']."<br />";
 						echo "Friends: ". $items['user']['friends_count']."<br />";
 						echo "Listed: ". $items['user']['listed_count']."<br>";
+						echo "Positivity Score: ". $scores['pos'] ."<br>";
+						echo "Negativity Score: ". $scores['neg'] ."<br>";
+						echo "Neutrality Score: ". $scores['neu'] ."<br>";
 						echo "</div>";
 					}
 				}
