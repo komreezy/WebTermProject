@@ -44,7 +44,7 @@
 	</head>
 
 	
-	<nav class="navbar navbar-inverse">
+	<nav class="navbar navbar-inverse" style="margin: 0px;">
 		<div class ="container-fluid">
 			<!-- Logo -->
 			<div class = "navbar-header">
@@ -53,7 +53,20 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a href ="home.php" class="navbar-brand"> Twitter Polarity</a>
+				
+				<!-- LOGO -->
+				<a href ="home.php" class="navbar-brand"> 
+				
+				<div style="float: left">
+					<img src = "Twitter_logo_blue.png" alt = "Image Not Supported on Your browser." height = "20" width = "20">
+				</div>
+				
+				<div style="float: left">
+					<img src = "Twitter_logo_red.png" alt = "Image Not Supported on Your browser." height = "20" width = "20">
+				</div> </a>
+				
+				<!-- End of Logo -->
+				
 			</div>
 			
 			<!-- Menu Items -->
@@ -64,11 +77,9 @@
 					<li class="dropdown">
 						<a href = '#' class="dropdown-toggle" data-toggle="dropdown"> Trends<span class="caret"></span></a>
 						<ul class="dropdown-menu">
-							<li> <a id="trends">Local Trends</a>	</li>
+							<li> <a href="trendtest.php">Local Trends</a>	</li>
 							<li><a href = "trendtest.php">WorldWide Trends</a></li>
-						
 						</ul>
-
 					</li>
 				</ul>
 				
@@ -82,8 +93,6 @@
 	</nav>
 	
 	<div>
-		
-	
 		<div class="modal fade" id="popUpWindow"> 
 			<div class="modal-dialog">
 				<div class="modal-content">
@@ -118,7 +127,6 @@
 		</div>
 	
 	</div>
-
 		
 	<form id="trender" action="trendtest.php" method="post" enctype="multipart/form-data">
 		<input id="latitude" name="latitude" type="hidden">
