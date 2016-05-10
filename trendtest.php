@@ -68,18 +68,26 @@
 				foreach($array['trends'] as $items){
 					{
 						$trend = $items['name'];
-						//$trend = str_replace('+', ' ', $trend); // Replaces all spaces with hyphens.
 						$trend = preg_replace('/[^A-Za-z0-9 \-]/', '', $trend);
 						echo "<div class='match' id='clickable' onclick='matchSubmit(&#39;".$trend."&#39;)'>";
 						echo "tweet volume: ".$items['tweet_volume']."<br />";
 						echo "name: ".$items['name']."<br />";
 						echo "url: ".$items['url']."<br />";
 						echo "</div>";
+						$fulldate=getdate(date("U"));
+						$date = ($fulldate['year']."-".$fulldate['mon']."-".$fulldate['mday']);
+						$volume = $items['tweet_volume'];
+						if ($items['tweet_volume'] == null){
+							$volume = 0;
+						}
+						$db->query("INSERT INTO trends VALUES ('".$items['name']."', ".$lat.", ".$lon.", '".$date."', ".$volume.");");
+
 					}
 				}
 			}
 		}catch(Exception $e){
 			echo "Error: Could not receive data from Twitter. This is probably caused by an overload of calls to the server. Please try again soon.";
+			echo $e;
 		}
 		
 ?>

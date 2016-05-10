@@ -1,6 +1,6 @@
 <?php
 	try{
-		$db = new PDO('mysql:host=localhost;dbname=imdb_small;charset=utf8mb4', 'ayy_taq', 'passwd321');
+		$db = new PDO('mysql:host=localhost;dbname=polarize;charset=utf8mb4', 'ayy_taq', 'passwd321');
 	
 		$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		$db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
@@ -77,7 +77,7 @@
 					<li class="dropdown">
 						<a href = '#' class="dropdown-toggle" data-toggle="dropdown"> Trends<span class="caret"></span></a>
 						<ul class="dropdown-menu">
-							<li> <a href="trendtest.php">Local Trends</a>	</li>
+							<li> <a id="trends">Local Trends</a>	</li>
 							<li><a href = "trendtest.php">WorldWide Trends</a></li>
 						</ul>
 					</li>
