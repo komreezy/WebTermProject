@@ -57,7 +57,7 @@
 				</button>
 				
 				<!-- LOGO -->
-				<a href ="home.php" class="navbar-brand"> 
+				<a href ="index.php" class="navbar-brand"> 
 				
 				<div style="float: left">
 					<img src = "Twitter_logo_blue.png" alt = "Image Not Supported on Your browser." height = "20" width = "20">
@@ -75,8 +75,8 @@
 			<div id = "navbar">
 			<div class="collapse navbar-collapse" id="mainNavBar">
 				<ul class="nav navbar-nav">
-					<li <?=echoActiveClassIfRequestMatches("home")?>> <a href="home.php">Home</a></li>
-					<li <?=echoActiveClassIfRequestMatches("index")?>> <a href="index.php">Polarize</a> </li>
+					<li <?=echoActiveClassIfRequestMatches("index")?>> <a href="index.php">Home</a></li>
+					<li <?=echoActiveClassIfRequestMatches("polarize")?>> <a href="polarize.php">Polarize</a> </li>
 					<li <?=echoActiveClassIfRequestMatches("trendtest")?>class="dropdown">
 						<a href = '#' class="dropdown-toggle" data-toggle="dropdown"> Trends<span class="caret"></span></a>
 						<ul class="dropdown-menu">

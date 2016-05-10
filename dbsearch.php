@@ -94,7 +94,7 @@
 		
 ?>
 
-	<form id="matcher" action="index.php" method="post" enctype="multipart/form-data">
+	<form id="matcher" action="polarize.php" method="post" enctype="multipart/form-data">
 		<input id="search" name="search_result" type="hidden">
 	</form>
 
