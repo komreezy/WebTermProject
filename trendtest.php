@@ -17,7 +17,7 @@
   
 
   <?php
-  	
+  		date_default_timezone_set('america/new_york');
   		set_error_handler('exceptions_error_handler');
 
 		function exceptions_error_handler($severity, $message, $filename, $lineno) {

@@ -1,6 +1,6 @@
 <?php
 	try{
-		$db = new PDO('mysql:host=localhost;dbname=polarize;charset=utf8mb4', 'root');
+		$db = new PDO('mysql:host=localhost;dbname=polarize;charset=utf8mb4', 'ayy_taq', 'passwd321');
 	
 		$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		$db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
