@@ -3,7 +3,21 @@
 <!DOCTYPE html>
 <html>
 <body style="background-color: #3498db">
+	<form id="dbsearch" action="dbsearch.php" method="post" enctype="multipart/form-data">
+		<input id="location" name="location" type="text" placeholder="Search by Location">
+		From <input id="minyear" name="minyear" type="text" placeholder="YYYY" maxlength="4" size="4">
+		<input id="minday" name="minday" type="text" placeholder="DD" maxlength="2" size="2">
+		<input id="minmonth" name="minmonth" type="text" placeholder="MM" maxlength="2" size="2">
+		To <input id="maxyear" name="maxyear" type="text" placeholder="YYYY" maxlength="4" size="4">
+		<input id="maxday" name="maxday" type="text" placeholder="DD" maxlength="2" size="2">
+		<input id="maxmonth" name="maxmonth" type="text" placeholder="MM" maxlength="2" size="2">
+		<input id="volume" name="volume" type="text" placeholder="Minimum Tweet Volume">
+		<input id="dbsubmit" type="submit" value="Search">
+	</form>
+  
+
   <?php
+  	
   		set_error_handler('exceptions_error_handler');
 
 		function exceptions_error_handler($severity, $message, $filename, $lineno) {
@@ -87,7 +101,7 @@
 				}
 			}
 		}catch(Exception $e){
-			echo "Error: Could not receive data from Twitter. This is probably caused by an overload of calls to the server. Please try again soon.";
+			//echo "Error: Could not receive data from Twitter. This is probably caused by an overload of calls to the server. Please try again soon.";
 			echo $e;
 		}
 		

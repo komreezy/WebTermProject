@@ -1,6 +1,6 @@
 <?php
 	try{
-		$db = new PDO('mysql:host=localhost;dbname=polarize;charset=utf8mb4', 'ayy_taq', 'passwd321');
+		$db = new PDO('mysql:host=localhost;dbname=polarize;charset=utf8mb4', 'root');
 	
 		$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		$db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
@@ -42,6 +42,8 @@
   
   
 	</head>
+	
+	
 
 	
 	<nav class="navbar navbar-inverse" style="margin: 0px;">
@@ -70,24 +72,43 @@
 			</div>
 			
 			<!-- Menu Items -->
+			<div id = "navbar">
 			<div class="collapse navbar-collapse" id="mainNavBar">
 				<ul class="nav navbar-nav">
-					<li class="active"> <a href="home.php">Home</a></li>
-					<li> <a href="index.php">Polarize</a> </li>
-					<li class="dropdown">
+					<li <?=echoActiveClassIfRequestMatches("home")?>> <a href="home.php">Home</a></li>
+					<li <?=echoActiveClassIfRequestMatches("index")?>> <a href="index.php">Polarize</a> </li>
+					<li <?=echoActiveClassIfRequestMatches("trendtest")?>class="dropdown">
 						<a href = '#' class="dropdown-toggle" data-toggle="dropdown"> Trends<span class="caret"></span></a>
 						<ul class="dropdown-menu">
-							<li> <a id="trends">Local Trends</a>	</li>
+							<li>  <a id='trends'">Local Trends</a>	</li>
 							<li><a href = "trendtest.php">WorldWide Trends</a></li>
 						</ul>
 					</li>
 				</ul>
+				
+		<?php 
+
+		function echoActiveClassIfRequestMatches($requestUri)	
+			{
+			$current_file_name = basename($_SERVER['REQUEST_URI'], ".php");
+
+		if ($current_file_name == $requestUri)
+			echo 'class="active"';
+		}
+
+		?>
+
+				
+				
+				
 				
 				<ul class="nav navbar-nav navbar-right"> 
 					<li> <button type="button" class="btn btn-success" data-toggle="modal" data-target="#popUpWindow"> SignIn/SignOut </button> </li>
 				</ul>
 			
 			</div>
+			</div>
+			
 		</div>
 			
 	</nav>
@@ -132,5 +153,11 @@
 		<input id="latitude" name="latitude" type="hidden">
 		<input id="longitude" name="longitude" type="hidden">
 	</form>
+	
+	<script>
+	$(document).ready(function() {
+    $('a[href="' + this.location.pathname + '"]').parent().addClass('active');
+});
+	</script>
 	
 </html>

@@ -32,6 +32,11 @@ form {
     z-index: 1;
 }
 
+#dbsearch {
+	width: 70%;
+	left: 15%;
+}
+
 #search {
 	padding:8px 15px;
 	background:rgba(50, 50, 50, 0.2);
