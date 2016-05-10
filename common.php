@@ -102,9 +102,6 @@
 				
 				
 				
-				<ul class="nav navbar-nav navbar-right"> 
-					<li> <button type="button" class="btn btn-success" data-toggle="modal" data-target="#popUpWindow"> SignIn/SignOut </button> </li>
-				</ul>
 			
 			</div>
 			</div>

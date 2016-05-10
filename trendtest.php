@@ -79,6 +79,7 @@
 				->performRequest();
 			echo "<p>Current trends:</p></br>";
 			$newResult = json_decode($newString, true);
+			echo "<p align=\"center\">Click a box below to view its Polarization.</p>";
 			foreach($newResult as $array){
 				foreach($array['trends'] as $items){
 					{
