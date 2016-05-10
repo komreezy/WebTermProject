@@ -48,6 +48,7 @@
 			{
 				echo "<div class='match'>";
 				echo "name: ".$items['name']."<br />";
+				$location = $items['name'];
 				echo "country: ".$items['country']."<br />";
 				$woeid = $items['woeid'];
 				echo "woeid: ".$items['woeid']."<br />";
@@ -80,7 +81,7 @@
 						if ($items['tweet_volume'] == null){
 							$volume = 0;
 						}
-						$db->query("INSERT INTO trends VALUES ('".$items['name']."', ".$lat.", ".$lon.", '".$date."', ".$volume.");");
+						$db->query("INSERT INTO trends VALUES ('".$items['name']."', '".$location."', '".$date."', ".$volume.");");
 
 					}
 				}

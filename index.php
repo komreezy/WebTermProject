@@ -12,7 +12,7 @@
 			$sentiment = new \PHPInsight\Sentiment();
 			if(isset($_POST["search_result"])){
 				$query = $_POST["search_result"];
-				$getfield = '?q="love%20' . $query . '"&result_type=recent&count='.$count.'filter=safe';
+				$getfield = '?q="love ' . $query . '"&result_type=mixed&since_id=0&count='.$count.'filter=safe';
 				$twitter = new TwitterAPIExchange($settings);
 				$string = $twitter->setGetfield($getfield)
 				    ->buildOauth($url, $requestMethod)
@@ -55,7 +55,7 @@
 			$sentiment = new \PHPInsight\Sentiment();
 			if(isset($_POST["search_result"])){
 				$query = $_POST["search_result"];
-				$getfield = '?q="hate%20' . $query . '"&result_type=recent&count='.$count.'filter=safe';
+				$getfield = '?q="hate ' . $query . '"&result_type=mixed&count='.$count.'filter=safe';
 				$twitter = new TwitterAPIExchange($settings);
 				$string = $twitter->setGetfield($getfield)
 				    ->buildOauth($url, $requestMethod)
